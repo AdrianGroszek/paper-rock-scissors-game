@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Paper, Rock and Scissors</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Galindo&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<img
+			src="./img/question-mark.png"
+			alt="question mark for rules"
+			class="question-mark hidden"
+		/>
+		<img src="./img/home.png" alt="home image" class="home-img hidden" />
+		<div class="rules-box hidden">
+			<div class="blur"></div>
+			<div class="rules-content">
+				<div class="rock-p">
+					<img src="./img/item-1.png" alt="Stone image" class="rules-img" />
+					<p class="rules-p">
+						<span class="rock">Rock</span> beats
+						<span class="scissors">scissors</span>
+					</p>
+				</div>
+				<div class="paper-p">
+					<img src="./img/item-2.png" alt="Stone image" class="rules-img" />
+					<p class="rules-p">
+						<span class="paper">Paper</span> beats
+						<span class="rock">rock</span>
+					</p>
+				</div>
+				<div class="scissors-p">
+					<img src="./img/item-3.png" alt="Stone image" class="rules-img" />
+					<p class="rules-p">
+						<span class="scissors">Scissors</span> beats
+						<span class="paper">paper</span>
+					</p>
+				</div>
+				<p class="rules-p green-p">Win 5 rounds to win the game</p>
+			</div>
+		</div>
+		<section class="start-view">
+			<h1 class="title">Paper, Rock and Scissors</h1>
+			<div class="blackhole-box">
+				<img
+					src="./img/blackhole.png"
+					alt="blackhole image"
+					class="blackhole-img"
+				/>
+				<img
+					src="./img/item-1.png"
+					alt="Stone image"
+					class="item-size game-item--0"
+				/>
+				<img
+					src="./img/item-2.png"
+					alt="paper image"
+					class="item-size game-item--1"
+				/>
+				<img
+					src="./img/item-3.png"
+					alt="scissors image"
+					class="item-size game-item--2"
+				/>
+			</div>
+			<button class="btn play-btn">PLAY</button>
+		</section>
+
+		<section class="game-view hidden">
+			<button class="btn new-game-btn">NEW</button>
+			<div class="score-table">
+				<div class="nickname-box">
+					<p class="nickname" id="player--0">YOU</p>
+					<p class="score" id="score--0">0</p>
+				</div>
+				<p class="vs">VS</p>
+				<div class="nickname-box">
+					<p class="nickname" id="player--1">ENEMY</p>
+					<p class="score" id="score--1">0</p>
+				</div>
+			</div>
+			<div class="choosen-options-view">
+				<div class="choosen-option-left">
+					<img
+						src="./img/item-3.png"
+						alt=""
+						class="item-size hidden"
+						id="item--0"
+					/>
+				</div>
+				<img
+					src="./img/blackhole.png"
+					alt="blackhole image"
+					class="blackhole-in-game"
+				/>
+				<div class="choosen-option-right">
+					<img
+						src="./img/item-3.png"
+						alt=""
+						class="item-size hidden"
+						id="item--1"
+					/>
+				</div>
+			</div>
+			<div class="items-box">
+				<img
+					src="./img/item-1.png"
+					alt="Stone image"
+					class="item-size-small"
+					id="btn--0"
+				/>
+				<img
+					src="./img/item-2.png"
+					alt="paper image"
+					class="item-size-small"
+					id="btn--1"
+				/>
+				<img
+					src="./img/item-3.png"
+					alt="scissors image"
+					class="item-size-small"
+					id="btn--2"
+				/>
+			</div>
+			<!-- Win blur -->
+			<div class="you-win hidden">
+				<div class="blur"></div>
+				<p class="you-win-text">YOU WIN!</p>
+				<p class="you-win-text-js"></p>
+			</div>
+			<!-- Lose blue -->
+			<div class="you-lost hidden">
+				<div class="blur"></div>
+				<p class="you-lost-text">YOU LOST!</p>
+				<p class="you-lost-text-js"></p>
+			</div>
+			<!-- rules -->
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
